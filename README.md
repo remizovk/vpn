@@ -55,6 +55,7 @@
 6. Запускаем openvpn клиент и добавляем в автозагрузку:  
 `systemctl start openvpn@server`  
 `systemctl enable openvpn@server`  
+
 7. Далее замеряем скорость в туннеле
 - на openvpn **server**  запускаем iperf3 в режиме сервера:  
 `iperf3 -s &`  
