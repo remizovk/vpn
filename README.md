@@ -16,10 +16,10 @@
 - отключаем SELinux  
 `setenforce 0` (работает до ребута)
 3. Настраиваем openvpn на машине **server**:  
-- создаём файл-ключ
-`openvpn --genkey --secret /etc/openvpn/static.key`
-- создаём конфигурационнýй файл vpn-сервера
-`vi /etc/openvpn/server.conf`
+- создаём файл-ключ  
+`openvpn --genkey --secret /etc/openvpn/static.key`  
+- создаём конфигурационнýй файл vpn-сервера  
+`vi /etc/openvpn/server.conf`  
 - файл server.conf должен содержать следующий текст:  
 > dev tap  
 > ifconfig 10.10.10.1 255.255.255.0  
