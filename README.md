@@ -20,7 +20,7 @@
 `openvpn --genkey --secret /etc/openvpn/static.key`  
 - создаём конфигурационнýй файл vpn-сервера  
 `vi /etc/openvpn/server.conf`  
-- файл server.conf должен содержать следующий текст:  
+
 > dev tap  
 > ifconfig 10.10.10.1 255.255.255.0  
 > topology subnet  
@@ -37,7 +37,7 @@
 5. Настройка openvpn **client**:  
 - создаём конфигурационнýй файл клиента  
 `vi /etc/openvpn/server.conf`  
-- файл должен содержать следующий конфиг  
+
 > dev tap  
 > remote 192.168.10.10  
 > ifconfig 10.10.10.2 255.255.255.0  
