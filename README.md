@@ -11,11 +11,11 @@
 2. Выполняем следующие команды для обеих машин (действуем от рута):  
 - устанавливаем epel репозиторий:  
 `yum install -y epel-release`  
-- устанавливаем пакет openvpn, easy-rsa и iperf3  
+- устанавливаем пакет openvpn и iperf3  
 `yum install -y openvpn iperf3`  
 - Отключаем SELinux  
 `setenforce 0` (работает до ребута)
-3. Настройка openvpn на машине **server**:  
+3. Настраиваем openvpn на машине **server**:  
 - создаём файл-ключ
 `openvpn --genkey --secret /etc/openvpn/static.key`
 - создаём конфигурационнýй файл vpn-сервера
