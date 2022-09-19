@@ -34,7 +34,6 @@
 `systemctl enable openvpn@server`  
 `systemctl status openvpn@server`  
 
-
 ![](https://github.com/remizovk/vpn/blob/8ccdde866dca205ae01bf41f4f82852c671885ec/screenshots/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202022-09-19%2015-11-06.png)  
 5. Настройка openvpn **client**:  
 - создаём конфигурационнýй файл клиента  
@@ -61,6 +60,7 @@
 `iperf3 -s &`  
 - на openvpn **client** запускаем iperf3 в режиме клиента и замеряем скорость в туннеле:  
 `iperf3 -c 10.10.10.1 -t 40 -i 5`  
+
 ![](https://github.com/remizovk/vpn/blob/0b6ce0c800019954e7d6a67730328902adf15511/screenshots/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202022-09-19%2015-34-41.png)  
 
 ![](https://github.com/remizovk/vpn/blob/0b6ce0c800019954e7d6a67730328902adf15511/screenshots/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%20%D0%BE%D1%82%202022-09-19%2015-35-15.png)  
