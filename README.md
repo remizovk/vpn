@@ -13,14 +13,14 @@
 `yum install -y epel-release`  
 - устанавливаем пакет openvpn и iperf3  
 `yum install -y openvpn iperf3`  
-- Отключаем SELinux  
+- отключаем SELinux  
 `setenforce 0` (работает до ребута)
 3. Настраиваем openvpn на машине **server**:  
 - создаём файл-ключ
 `openvpn --genkey --secret /etc/openvpn/static.key`
 - создаём конфигурационнýй файл vpn-сервера
 `vi /etc/openvpn/server.conf`
-- Файл server.conf должен содержать следующий текст:  
+- файл server.conf должен содержать следующий текст:  
 > dev tap  
 > ifconfig 10.10.10.1 255.255.255.0  
 > topology subnet  
@@ -37,7 +37,7 @@
 5. Настройка openvpn **client**:  
 - создаём конфигурационнýй файл клиента  
 `vi /etc/openvpn/server.conf`  
-- Файл должен содержать следующий конфиг  
+- файл должен содержать следующий конфиг  
 > dev tap  
 > remote 192.168.10.10  
 > ifconfig 10.10.10.2 255.255.255.0  
@@ -49,7 +49,7 @@
 > log /var/log/openvpn.log  
 > verb 3  
 
-- На машине **client** в директорию /etc/openvpn/ копируем файл-ключ **static.key**, который был создан на **server**  
+- на машине **client** в директорию /etc/openvpn/ копируем файл-ключ **static.key**, который был создан на **server**  
 
 6. Запускаем openvpn клиент и добавляем в автозагрузку:  
 `systemctl start openvpn@server`  
